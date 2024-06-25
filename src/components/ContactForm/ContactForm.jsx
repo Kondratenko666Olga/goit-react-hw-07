@@ -1,8 +1,8 @@
 import styles from './ContactForm.module.css';
-// src/components/ContactForm/ContactForm.jsx
+
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -30,7 +30,7 @@ const ContactForm = () => {
         value={number}
         onChange={e => setNumber(e.target.value)}
       />
-      <button type="submit">Add Contact</button>
+      <button className={styles.button} type="submit">Add Contact</button>
     </form>
   );
 };

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
-import styles from './SearchBox.module.css'
+import styles from './SearchBox.module.css';
 
 const SearchBox = () => {
   const dispatch = useDispatch();
@@ -11,10 +11,10 @@ const SearchBox = () => {
 
   return (
     <input
-    className={styles.searchBoxInput}
       type="text"
       placeholder="Search contacts"
       onChange={handleSearchChange}
+      className={styles.input}
     />
   );
 };
